@@ -41,9 +41,9 @@ public class HomeController {
 				model.addAttribute("emailExists", true);
 			}
 			if(userService.checkUsernameExists(user.getUsername())) {
-				model.addAttribute("userNameExists", true);
+				model.addAttribute("usernameExists", true);
 			}
-			return "singup";
+			return "signup";
 		}else {
 			userService.save(user);
 			return "redirect:/";
