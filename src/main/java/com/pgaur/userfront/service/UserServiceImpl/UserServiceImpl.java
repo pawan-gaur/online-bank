@@ -48,7 +48,6 @@ private static final Logger LOG = LoggerFactory.getLogger(UserService.class);
         return userDao.findByEmail(email);
     }
     
-    
     public User createUser(User user, Set<UserRole> userRoles) {
         User localUser = userDao.findByUsername(user.getUsername());
 
